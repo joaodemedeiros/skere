@@ -1,0 +1,213 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <title>Registros</title>
+
+    <!-- Custom fonts for this template-->
+    <link href="{% static 'vendor/fontawesome-free/css/all.min.css' %}" rel="stylesheet" type="text/css">
+    <link
+        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+        rel="stylesheet">
+
+    <!-- Custom styles for this template-->
+    <link href="{% static 'css/sb-admin-2.css' %}" rel="stylesheet">
+
+</head>
+
+<body class="bg-gradient-primary">
+
+    <nav class="navbar navbar-expand-lg bg-dark sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="#">Spartans Arena</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarScroll">
+            <ul class="navbar-nav me-auto my-2 my-lg-0 navbar-nav-scroll" style="--bs-scroll-height: 100px;">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#registro_clientes">Clientes</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#registro_empleados">Empleados</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#registro_ventas">Facturas</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+<!-- Seccion de Clientes -->
+<section id="registro_clientes">
+    <div class="container" style="padding-top: 2%;">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-clients-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">¡Registra a tus clientes!</h1>
+                            </div>
+                            <form method="post">
+                                <div>
+                                    <div class="mb-3">
+                                        <input type="text" class="form-control" id="cedula" placeholder="Coloca tu N° de Cedula aqui" minlength="7" maxlength="9" pattern="[0-9]+" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="nombres" placeholder="Coloca tus Nombres aqui" pattern="[a-zA-Z]+" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="apellidos" placeholder="Coloca tus Apellidos aqui" pattern="[a-zA-Z]+" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="direccion" placeholder="Coloca tu Direccion aqui" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="date" class="form-control" id="fecha_nacimiento" min="1900-01-01">
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="email" placeholder="Coloca tu Correo Electronico aqui" pattern="[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*@[a-zA-Z0-9_]+([.][a-zA-Z0-9_]+)*[.][a-zA-Z]{1,5}" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="telefono" placeholder="Coloca tu numero de telefono aqui" minlength="9" maxlength="9" pattern="[0-9]+" required required>
+                                      </div>
+                                  <button type="submit" class="btn btn-primary btn-user btn-block">
+                                      Registrar cliente
+                                  </button>
+                                </div>
+                            </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+<!-- Seccion de Distribuidores -->
+<section id="registro_empleados">
+    <div class="container" style="padding: 5%;">
+
+      <div class="card o-hidden border-0 shadow-lg my-5">
+          <div class="card-body p-0">
+              <!-- Nested Row within Card Body -->
+              <div class="row">
+                  <div class="col-lg-5 d-none d-lg-block bg-register-distributors-image"></div>
+                  <div class="col-lg-7">
+                      <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">¡Registra a tus empleados!</h1>
+                            </div>
+                            <form method="post">
+                                <div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="nombres" placeholder="Coloca los nombres de tu empleado aqui" pattern="[a-zA-Z]+" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="apellidos" placeholder="Coloca los apellidos de tu empleado aqui" pattern="[a-zA-Z]+" required>
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="cargo" placeholder="Coloca el cargo de tu empleado aqui" pattern="[a-zA-Z]+" required>
+                                      </div>
+                                  <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Registrar empleado
+                                  </button>
+                                </div>
+                            </form>
+                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+      </div>
+
+    </div>
+</section>
+
+<!-- Seccion Devoluciones -->
+
+<section id="registro_ventas">
+    <div class="container" style="padding: 2%;">
+
+        <div class="card o-hidden border-0 shadow-lg my-5">
+            <div class="card-body p-0">
+                <!-- Nested Row within Card Body -->
+                <div class="row">
+                    <div class="col-lg-5 d-none d-lg-block bg-register-devolutions-image"></div>
+                    <div class="col-lg-7">
+                        <div class="p-5">
+                            <div class="text-center">
+                                <h1 class="h4 text-gray-900 mb-4">¡Registra tus ventas!</h1>
+                            </div>
+                              <form method="post">
+                                  <div>
+                                      <div class="mb-3">
+                                        <label for="">Fecha en la que se realizo la venta</label>
+                                        <input type="date" class="form-control" id="fecha" required min="2000-01-01">
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="text" class="form-control" id="tipo_pago" placeholder="Tipo de pago" pattern="[a-zA-Z]+" required maxlength="30">
+                                      </div>
+                                      <div class="mb-3">
+                                        <input type="number" class="form-control" id="porcentaje_IVA" placeholder="Porcentaje de IVA" required>
+                                      </div>
+                                      <div style="margin-bottom: 3%;">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                          <option selected>Empleado que hizo la venta</option>
+                                        </select>
+                                      </div>
+                                      <div style="margin-bottom: 3%;">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                          <option selected>Cliente que realizo la venta</option>
+                                        </select>
+                                      </div>
+                                      <div style="margin-bottom: 3%;">
+                                        <select class="form-select" id="floatingSelect" aria-label="Floating label select example" required>
+                                          <option selected>Tasa del dolar</option>
+                                        </select>
+                                      </div>
+                                  <button type="submit" class="btn btn-primary btn-user btn-block">
+                                    Registrar venta
+                                  </button>
+                                </div>
+                              </form>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+
+    <!-- Bootstrap core JavaScript-->
+    <script src="{% static 'vendor/jquery/jquery.min.js' %}"></script>
+    <script src="{% static 'vendor/bootstrap/js/bootstrap.bundle.min.js' %}"></script>
+
+    <!-- Core plugin JavaScript-->
+    <script src="{% static 'vendor/jquery-easing/jquery.easing.min.js' %}"></script>
+
+    <!-- Custom scripts for all pages-->
+    <script src="{% static 'js/sb-admin-2.min.js' %}"></script>
+
+</body>
+
+</html>
