@@ -92,12 +92,12 @@ DATABASES = {
         'PORT': 3306,
     },
 
-    'default_old': {
+    'default_db_old': {
         'ENGINE': 'django.db.backends.sqlite3',
         'NAME': BASE_DIR / 'db.sqlite3',
     },
 
-    'spartans_db': {
+    'spartans_db_old': {
         'ENGINE': 'django.db.backends.mysql',
         'NAME': 'spartans',
         'USER': 'root',
